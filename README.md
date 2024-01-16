@@ -22,13 +22,11 @@ The dataset consists of two CSV files:
 
 ### 3. Model Training
 
-- Used a Decision Tree Classifier for the initial model.
+- Used a Random Forest Classifier for the initial model.
 - Employed hyperparameter tuning using GridSearchCV.
 
 ### 4. Hyperparameter Tuning
 
-- For Decision Tree:
-  - Tuned the 'max_depth' hyperparameter using GridSearchCV.
 - For Random Forest:
   - Defined the parameter distribution for 'max_depth' and 'n_estimators'.
   - Utilized RandomizedSearchCV for hyperparameter tuning.
@@ -46,14 +44,16 @@ The dataset consists of two CSV files:
 ## Usage
 
 1. Ensure you have Python installed along with the required libraries listed in `requirements.txt`.
-2. Run the Jupyter Notebook or Python script (`titanic_analysis.py`) to execute the analysis.
+2. Run the Jupyter Notebook or Python script (`Titanic Disaster.ipynb`) to execute the analysis.
 3. Review the results and model performance metrics.
 4. Optionally, modify parameters, features, or algorithms for further experimentation.
 
 ## Files
 
-- `titanic_analysis.py`: Python script containing the complete analysis code.
+- `Titanic Disaster.ipynb`: Jupyter Notebook containing the complete analysis code.
 - `random_forest_decision_tree.png`: Visualization of a decision tree from the Random Forest.
+- `test.csv`, `train.csv`: Data Files
+ `titanic_submission.csv and xlsx`: Output Files
 
 ## Author
 
