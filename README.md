@@ -1,59 +1,42 @@
-# Titanic Dataset Analysis
+# Titanic Survival Analysis
 
-This repository contains code and documentation for the analysis of the Titanic dataset. The goal is to build a predictive model to determine whether a passenger survived or not during the infamous Titanic shipwreck.
+## Overview
+This project delves into the analysis of the Titanic dataset, one of the most infamous shipwrecks in history. The aim is to use data science and machine learning to uncover patterns and predict survival outcomes of the passengers. This project employs Python and several key libraries in data science, including Pandas, Matplotlib, Seaborn, and Scikit-learn.
 
 ## Dataset
+The dataset is split into two files:
+- `train.csv`: Contains passenger information and survival outcome (used for training the model).
+- `test.csv`: Contains passenger information without survival outcomes (used for predictions).
 
-The dataset consists of two CSV files:
-- `train.csv`: Contains details of a subset of passengers with ground truth on survival.
-- `test.csv`: Similar information but without disclosing the ground truth for each passenger.
+## Features
+The dataset includes several features:
+- Passenger Class (Pclass)
+- Name
+- Sex
+- Age
+- Number of Siblings/Spouses Aboard (SibSp)
+- Number of Parents/Children Aboard (Parch)
+- Ticket Number
+- Passenger Fare
+- Cabin Number
+- Port of Embarkation
 
-## Steps
+## Workflow
+1. **Data Loading**: Importing the datasets using Pandas.
+2. **Data Preprocessing**: Handling missing values, encoding categorical variables, feature engineering, and scaling.
+3. **Exploratory Data Analysis (EDA)**: Analyzing various features and their impact on survival using visualization tools.
+4. **Model Training**: Implementing a Random Forest Classifier to predict survival outcomes.
+5. **Model Evaluation**: Evaluating the model's performance using metrics such as accuracy, precision, recall, and confusion matrix.
+6. **Prediction on Test Data**: Applying the trained model to the test dataset to predict survival outcomes.
 
-### 1. Feature Engineering
+## Libraries Used
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
-- Added a new feature, `FamilySize`, which represents the total family size on board (Siblings/Spouses + Parents/Children + 1).
-- Handled missing values for 'Age', 'Embarked', and 'Fare'.
-- Encoded categorical features ('Sex' and 'Embarked') using Label Encoding.
-
-### 2. Data Splitting
-
-- Split the training data into training and validation sets using the `train_test_split` function.
-
-### 3. Model Training
-
-- Used a Random Forest Classifier for the initial model.
-- Employed hyperparameter tuning using GridSearchCV.
-
-### 4. Hyperparameter Tuning
-
-- For Random Forest:
-  - Defined the parameter distribution for 'max_depth' and 'n_estimators'.
-  - Utilized RandomizedSearchCV for hyperparameter tuning.
-  
-### 5. Assess Model Performance
-
-- Evaluated the model(s) on the validation set.
-- Calculated accuracy, confusion matrix, and classification report.
-
-### 6. Tree Visualization
-
-- Visualized a decision tree from the Random Forest.
-- Saved the visualization as a PNG file.
-
-## Usage
-
-1. Ensure you have Python installed along with the required libraries listed in `requirements.txt`.
-2. Run the Jupyter Notebook or Python script (`Titanic Disaster.ipynb`) to execute the analysis.
-3. Review the results and model performance metrics.
-4. Optionally, modify parameters, features, or algorithms for further experimentation.
-
-## Files
-
-- `Titanic Disaster.ipynb`: Jupyter Notebook containing the complete analysis code.
-- `random_forest_decision_tree.png`: Visualization of a decision tree from the Random Forest.
-- `test.csv`, `train.csv`: Data Files
- `titanic_submission.csv and xlsx`: Output Files
+## Installation
+To run this project, install the required libraries using the following command:
 
 ## Author
 
